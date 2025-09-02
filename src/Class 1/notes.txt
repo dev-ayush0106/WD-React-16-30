@@ -1,0 +1,16 @@
+npm create vite@latest : for creating project file
+npm i : for installing node modules
+
+jsx format : javascript extensible (html & js saath mae likh sakta h)
+jsx format is not able to run on browser : ek dependency :babel
+
+
+how to write a code ?
+--> class component & functional component
+
+function Componentname(){
+    return(
+        html code
+    )
+}
+export default Componentname
