@@ -4,6 +4,7 @@ import Parent from "./Class 2/Parent";
 import ProductDetails from "./Class 2/ProductDetails";
 import Second, { Kusum, New } from "./Class 2/Second";
 import Third from "./Class 3/Third";
+import Fouth from "./Class 4/Fouth";
 import "./index.css"
 
 function App() {
@@ -17,7 +18,9 @@ function App() {
       {/* <Parent/> */}
       {/* <ProductDetails/> */}
 
-      <Third/>
+      {/* <Third/> */}
+
+      <Fouth/>
     </>
   )
 }

@@ -1,0 +1,12 @@
+npm i react-router-dom
+
+router=createBrowserRoutes([{},.......])
+<RouterProvider router="" />
+
+children elements : "/"(not required) : <Outlet>(compulsory for parent component)
+
+useNavigate(): use to navigate from one path to anthor
+
+link tag is us to navigate to the page for spa
+
+{*} this path is used for error path found
