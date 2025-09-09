@@ -10,6 +10,7 @@ import Python from './Components/Children/Python'
 import Ds from './Components/Children/Ds'
 import Navbar from './Components/Navbar'
 import Nopage from './Components/Nopage'
+import Student from './Components/Student'
 
 const Fouth = () => {
     let router=createBrowserRouter([
@@ -58,6 +59,13 @@ const Fouth = () => {
                     element:<Ds/>
                 }
             ])
+        },
+        {
+            path:"/student/:id",
+            element:<>
+                <Navbar/>
+                <Student/>
+            </>
         },
         {
             path:"*",

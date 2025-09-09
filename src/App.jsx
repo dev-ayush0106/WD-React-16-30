@@ -5,6 +5,8 @@ import ProductDetails from "./Class 2/ProductDetails";
 import Second, { Kusum, New } from "./Class 2/Second";
 import Third from "./Class 3/Third";
 import Fouth from "./Class 4/Fouth";
+import Fifth from "./Class 5/Fifth";
+import Main from "./Class 5/Main";
 import "./index.css"
 
 function App() {
@@ -20,7 +22,10 @@ function App() {
 
       {/* <Third/> */}
 
-      <Fouth/>
+      {/* <Fouth/> */}
+
+      {/* <Fifth/> */}
+      <Main/>
     </>
   )
 }
