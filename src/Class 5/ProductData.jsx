@@ -5,7 +5,7 @@ const ProductData = ({pid,title,price,thumbnail}) => {
     let navigate=useNavigate();
 
     function handleClick(){
-        navigate("/product")
+        navigate(`/product/${pid}`)
     }
     return (
 

@@ -12,7 +12,7 @@ const Main = () => {
             </>
         },
         {
-            path:"/product",
+            path:"/product/:id",
             element:<ProductDetails/>
         }
     ])
