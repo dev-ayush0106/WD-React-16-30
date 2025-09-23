@@ -1,4 +1,4 @@
-import "./App.css"
+// import "./App.css"
 import First from "./Class 1/First";
 import Parent from "./Class 2/Parent";
 import ProductDetails from "./Class 2/ProductDetails";
@@ -7,7 +7,12 @@ import Third from "./Class 3/Third";
 import Fouth from "./Class 4/Fouth";
 import Fifth from "./Class 5/Fifth";
 import Main from "./Class 5/Main";
-import "./index.css"
+import Sixth from "./Class 6/Sixth";
+import Seventh from "./Class 7/Seventh";
+import Eight from "./Class 8/Eight";
+import Ninth from "./Class 9/Ninth";
+import Ninth1 from "./Class 9/Ninth1";
+// import "./index.css"
 
 function App() {
   return (
@@ -25,7 +30,15 @@ function App() {
       {/* <Fouth/> */}
 
       {/* <Fifth/> */}
-      <Main/>
+      {/* <Main/> */}
+
+      {/* <Sixth/> */}
+      {/* <Seventh/> */}
+
+      {/* <Eight/> */}
+
+      {/* <Ninth/> */}
+      <Ninth1/>
 
 
     </>
