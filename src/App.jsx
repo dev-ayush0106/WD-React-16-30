@@ -1,5 +1,7 @@
-// import "./App.css"
+import "./App.css"
 import First from "./Class 1/First";
+import Tenth from "./Class 10/Tenth";
+import Tenth1 from "./Class 10/Tenth1";
 import Parent from "./Class 2/Parent";
 import ProductDetails from "./Class 2/ProductDetails";
 import Second, { Kusum, New } from "./Class 2/Second";
@@ -38,7 +40,10 @@ function App() {
       {/* <Eight/> */}
 
       {/* <Ninth/> */}
-      <Ninth1/>
+      {/* <Ninth1/> */}
+
+      {/* <Tenth/> */}
+      <Tenth1/>
 
 
     </>
