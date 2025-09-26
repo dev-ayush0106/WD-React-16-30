@@ -54,11 +54,10 @@ const Fifth = () => {
     
   return (
     <div>
-      <h1>Api Fetch</h1>
-      <div style={{display:"flex",justifyContent:"space-between",padding:"30px"}}>
+      {/* <div style={{display:"flex",justifyContent:"space-between",padding:"30px"}}>
         <h2>Logo</h2>
         <h2>Cart</h2>
-      </div>
+      </div> */}
       <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:"30px"}}>
       {
         productsData.slice(start,end).map((el)=>(

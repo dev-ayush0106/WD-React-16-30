@@ -3,6 +3,7 @@ import First from "./Class 1/First";
 import Tenth from "./Class 10/Tenth";
 import Tenth1 from "./Class 10/Tenth1";
 import Eleventh from "./Class 11/Eleventh";
+import Routing from "./Class 12/Routing";
 import Parent from "./Class 2/Parent";
 import ProductDetails from "./Class 2/ProductDetails";
 import Second, { Kusum, New } from "./Class 2/Second";
@@ -15,6 +16,7 @@ import Seventh from "./Class 7/Seventh";
 import Eight from "./Class 8/Eight";
 import Ninth from "./Class 9/Ninth";
 import Ninth1 from "./Class 9/Ninth1";
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import "./index.css"
 
 function App() {
@@ -48,7 +50,7 @@ function App() {
 
       {/* <Eleventh/> */}
 
-
+        <Routing/>
     </>
   )
 }

@@ -4,11 +4,12 @@ import './index.css'
 import App from './App.jsx'
 import { Bounce, ToastContainer } from 'react-toastify'
 import { Provider } from 'react-redux'
-import { store } from './Class 11/store/store.js'
+// import { store } from './Class 11/store/store.js'
+import { cartStore } from './Class 12/redux/cartStore/cartStore.js'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Provider store={store}>
+    <Provider store={cartStore}>
       <App />
       <ToastContainer
         position="top-center"

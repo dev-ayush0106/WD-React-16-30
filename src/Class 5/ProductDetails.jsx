@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
+import { add } from '../Class 12/redux/cartSlicer/cartSlicer';
 
 const ProductDetails = () => {
   let [data, setData] = useState({});
@@ -25,13 +27,22 @@ const ProductDetails = () => {
   }, [])
 
   console.log(data)
+
+  let dispatch=useDispatch()
+
+  function addToCart(data){
+    dispatch(add(data))
+  }
+
+  let cartProducts=useSelector((state)=>state.cart)
+  console.log(cartProducts)
   return (
     <div style={{display:"flex",justifyContent:"center",flexDirection:"column",alignItems:"center"}}>
       <h1>{data.title}</h1>
       <img src={data.thumbnail} alt="" />
       <p style={{width:"600px"}}>{data.description}</p>
       <p>Rs.{Math.ceil(data.price*83)}</p>
-      <button>Add to Cart</button>
+      <button onClick={()=>{addToCart(data)}}>Add to Cart</button>
     </div>
   )
 }
