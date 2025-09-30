@@ -1,16 +1,24 @@
 import { div, h1 } from 'motion/react-client'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { remove } from './redux/cartSlicer/cartSlicer'
+import { decCartItem, incCartItem, remove } from './redux/cartSlicer/cartSlicer'
 
 const Cart = () => {
-  const [quantity,setQuantity]=useState(1);
   const cartProducts=useSelector((state)=>state.cart)
   let dispatch=useDispatch()
 
   function handleRemove(data){
     dispatch(remove(data))
   }
+
+  function increaseCart(data){
+    dispatch(incCartItem(data))
+  }
+  function decreaseCart(data){
+    dispatch(decCartItem(data))
+  }
+
+  console.log(cartProducts);
   return (
     <div>
       <h1>Cart Page</h1>
@@ -25,7 +33,10 @@ const Cart = () => {
               <div className="right">
                 <h2>{el.title}</h2>
                 <p>{`Rs ${Math.ceil(el.price*83)}`}</p>
-                <p>Quantity:{quantity}</p>
+                <button onClick={()=>{increaseCart(el.id)}}>+</button>
+                <span>Quantity:{el.quantity}</span>
+                <button onClick={()=>{decreaseCart(el.id)}}>-</button>
+                <br />
                 <button style={{backgroundColor:"red",color:"white"}}
                 onClick={()=>{handleRemove(el.id)}}
                 >Remove From Cart</button>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
-import { add } from '../Class 12/redux/cartSlicer/cartSlicer';
+import { add, addQuantity } from '../Class 12/redux/cartSlicer/cartSlicer';
 
 const ProductDetails = () => {
   let [data, setData] = useState({});
@@ -27,14 +27,19 @@ const ProductDetails = () => {
   }, [])
 
   console.log(data)
-
+  
+  let cartProducts=useSelector((state)=>state.cart)
   let dispatch=useDispatch()
 
   function addToCart(data){
-    dispatch(add(data))
+    if(cartProducts.find((el)=>el.id===data.id)){
+      dispatch(addQuantity(data.id))
+    }
+    else{
+      dispatch(add({...data,"quantity":1}))
+    }
   }
 
-  let cartProducts=useSelector((state)=>state.cart)
   console.log(cartProducts)
   return (
     <div style={{display:"flex",justifyContent:"center",flexDirection:"column",alignItems:"center"}}>
